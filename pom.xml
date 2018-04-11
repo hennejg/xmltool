@@ -19,16 +19,16 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mycila</groupId>
-        <artifactId>mycila-pom</artifactId>
-        <version>3</version>
-        <relativePath>../pom</relativePath>
-    </parent>
+<!--     <parent> -->
+<!--         <groupId>com.mycila</groupId> -->
+<!--         <artifactId>mycila-pom</artifactId> -->
+<!--         <version>3</version> -->
+<!--         <relativePath>../pom</relativePath> -->
+<!--     </parent> -->
 
     <groupId>com.mycila</groupId>
     <artifactId>mycila-xmltool</artifactId>
-    <version>4.5.ga-SNAPSHOT</version>
+    <version>4.5.levigo</version>
     <packaging>jar</packaging>
 
     <name>mycila-xmltool</name>
@@ -40,6 +40,19 @@
         <mycila.github.name>xmltool</mycila.github.name>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>artifactory-releases</id>
+            <name>artifactory-releases</name>
+            <url>http://artifactory/artifactory/libs-releases-local</url>
+        </repository>
+        <snapshotRepository>
+            <id>artifactory-snapshots</id>
+            <name>artifactory-snapshots</name>
+            <url>http://artifactory/artifactory/libs-snapshots-local</url>
+        </snapshotRepository>
+    </distributionManagement>
+    
     <scm>
         <connection>scm:git:https://github.com/mycila/${mycila.github.name}.git</connection>
         <developerConnection>scm:git:git@github.com:mycila/${mycila.github.name}.git</developerConnection>
